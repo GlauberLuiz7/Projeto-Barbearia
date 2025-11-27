@@ -1,15 +1,16 @@
-<div class="app-shell">
-	<header class="p-4 bg-gray-900 text-white flex items-center justify-between">
-		<div class="flex items-center gap-4">
-			<h1 class="font-bold">Barbearia Alpha</h1>
-		</div>
-		<nav class="flex gap-3">
-			<a routerLink="/" class="text-yellow-500 hover:text-white">Home</a>
-			<a routerLink="/agendamento" class="text-yellow-500 hover:text-white">Agendamento</a>
-		</nav>
-	</header>
+<div class="app-shell min-h-screen flex flex-col">
+    <header class="w-full bg-gray-900 text-white flex items-center justify-between px-6 py-4 shadow-md sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <h1 class="center-content flex items-center gap-4">Barbearia Alpha</h1>
+        </div>
+        
+        <nav class="flex gap-6">
+            <a routerLink="/" class="text-gray-300 hover:text-yellow-500 transition-colors font-medium">Home</a>
+            <a routerLink="/agendamento" class="text-gray-300 hover:text-yellow-500 transition-colors font-medium">Agendamento</a>
+        </nav>
+    </header>
 
-	<main class="p-4">
-		<router-outlet></router-outlet>
-	</main>
+    <main class="flex-grow">
+        <router-outlet></router-outlet>
+    </main>
 </div>

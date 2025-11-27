@@ -11,20 +11,53 @@
 }
 
 .btn-primary {
-  background-color: #d97706;
+  background-color: #d97706; /* Yellow-700 */
   transition: background-color 0.2s;
 }
 
 .btn-primary:hover {
-  background-color: #b45309;
+  background-color: #b45309; /* Yellow-800 */
 }
 
 .input-style {
-  background-color: #4b5563;
+  background-color: #4b5563; /* Gray-600 */
   color: #f0f0f0;
-  border: 1px solid #6b7280;
+  border: 1px solid #6b7280; /* Gray-500 */
 }
 
 .view-transition {
   transition: opacity 0.3s ease-in-out;
+}
+
+/* NOVO: Estilos para os Botões de Horário */
+.horarios-grid {
+  overflow-x: auto; 
+}
+
+.horario-btn, .horario-selecionado {
+  padding: 8px 4px; 
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem; /* text-sm */
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.horario-btn {
+  background-color: #4b5563; /* Cinza escuro */
+  color: #f0f0f0;
+  border-color: #6b7280;
+}
+
+.horario-btn:hover {
+  background-color: #6b7280; 
+  transform: translateY(-1px);
+}
+
+.horario-selecionado {
+  background-color: #d97706; /* Amarelo escuro */
+  color: #1a1a1a; /* Texto escuro */
+  border-color: #f59e0b; /* Borda amarela */
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5); /* Sombra amarela */
 }

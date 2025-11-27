@@ -4,9 +4,19 @@
 
     <!-- HOME -->
     <div id="home-view" class="view-transition">
-      <header class="header-bg rounded-xl shadow-2xl p-8 text-center mb-10">
-        <h1 class="text-5xl font-extrabold text-white uppercase tracking-wider">Barbearia Alpha</h1>
-        <p class="text-xl text-yellow-500 mt-2">Seu estilo, nossa arte.</p>
+      <header class="center-content mb-10 text-center">
+        <h1 class="titulo">Barbearia Alpha</h1>
+        <h2 class="text-x1 text-white-500 mt-2">O que a sua barba está escondendo?</h2>
+        <p class="text-xl text-yellow-500 mt-2">
+        Dizem que a verdadeira transformação começa na cadeira de barbeiro.
+          
+        Nós não cortamos apenas cabelo. Nós revelamos caráter, esculpimos confiança e preparamos você para o próximo nível. Esqueça o 'mais do mesmo'.
+          
+        Curioso para saber como seria a sua melhor versão?
+          
+        Venha descobrir o segredo por trás do visual que vira cabeças.
+          
+        Agende seu horário e sinta a diferença.</p>
         <button (click)="selectBarbeiro('João')"
                 class="btn-primary mt-6 px-8 py-3 rounded-full text-white font-bold text-lg shadow-lg hover:shadow-xl transition duration-300">
           AGENDAR HORÁRIO
@@ -18,29 +28,29 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           <div class="barber-card p-6 rounded-lg text-center">
-              <img src="https://placehold.co/100x100/6B46C1/FFFFFF?text=J"
+              <img src="/assets/imagens/joao.jpg"
                 alt="João"
                 class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
             <h3 class="text-xl font-semibold text-white">João</h3>
-            <p class="text-gray-400">Especialista em cortes clássicos.</p>
+            <p class="text-gray-300">Especialista em cortes clássicos.</p>
             <button class="btn-primary mt-4 px-4 py-2 rounded-lg text-white" (click)="selectBarbeiro('João')">Agendar com João</button>
           </div>
 
           <div class="barber-card p-6 rounded-lg text-center">
-              <img src="https://placehold.co/100x100/38B2AC/FFFFFF?text=M"
+              <img src="assets/imagens/marcos.jpg"
                 alt="Marcos"
                 class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
             <h3 class="text-xl font-semibold text-white">Marcos</h3>
-            <p class="text-gray-400">Mestre em barba e navalha.</p>
+            <p class="text-gray-300">Mestre em barba e navalha.</p>
             <button class="btn-primary mt-4 px-4 py-2 rounded-lg text-white" (click)="selectBarbeiro('Marcos')">Agendar com Marcos</button>
           </div>
 
           <div class="barber-card p-6 rounded-lg text-center">
-              <img src="https://placehold.co/100x100/F6AD55/FFFFFF?text=P"
+              <img src="assets/imagens/paulo.jpg"
                 alt="Paulo"
                 class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
             <h3 class="text-xl font-semibold text-white">Paulo</h3>
-            <p class="text-gray-400">Estilos modernos e fades.</p>
+            <p class="text-gray-300">Estilos modernos e fades.</p>
             <button class="btn-primary mt-4 px-4 py-2 rounded-lg text-white" (click)="selectBarbeiro('Paulo')">Agendar com Paulo</button>
           </div>
 

@@ -1,17 +1,53 @@
-/* ------------------------ */
 /* GERAL */
-/* ------------------------ */
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, black, #18181b, black);
-    color: white;
-  }
+
+html, body {
+  height: 100%; /* Garante altura total */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #000; /* Fundo preto base para evitar flashes brancos */
+  color: white;
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada */
   
-  /* ------------------------ */
-  /* BANNER */
-  /* ------------------------ */
+  
+
+  .text-bold {
+    /* Adicione !important em algumas propriedades para testar */
+    font-size: 24px !important; 
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important; 
+    color: #ffffff !important; 
+    cursor: pointer; 
+    transition: color 0.3s;
+    tex
+}
+}
+
+.logo-title:hover {
+    color: #facc15; /* Amarelo ao passar o mouse */
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px; /* Altura da navbar */
+  background-color: #333; /* Cor de fundo */
+  color: #f0f0f0; /* Cor do texto */
+  font-size: 1.8rem; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito para o texto */
+  border-bottom: 2px solid #444; /* Linha inferior */
+  position: fixed; /* Fixa a navbar no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Garante que ocupe toda a largura */
+  z-index: 1000; /* Mantém a navbar acima de outros elementos */
+}
+
+  /* BANNER */ 
   
   .banner {
     position: relative;
@@ -67,9 +103,9 @@ body {
     border-radius: 4px;
   }
   
-  /* ------------------------ */
+  
   /* CONTAINER */
-  /* ------------------------ */
+  
   
   .container {
     max-width: 1200px;
@@ -92,14 +128,15 @@ body {
     font-size: 18px;
   }
   
-  /* ------------------------ */
+  
   /* GRID CARDS */
-  /* ------------------------ */
+  
   
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
+    padding: 10px;
   }
   
   /* CARD */
@@ -107,14 +144,15 @@ body {
     background: linear-gradient(to bottom, #18181b, #0f0f0f);
     border: 1px solid #2a2a2a;
     border-radius: 8px;
-    padding: 24px;
+    padding: 32px; /* Aumentado de 24px para 32px */
     text-align: center;
     transition: 0.3s ease;
+    transform: scale(1.1); /* Aumenta o tamanho geral do card */
   }
   
   .card:hover {
     border-color: #3a3a3a;
-    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    box-shadow: 0 0 25px rgba(255,255,255,0.2); /* Aumentado o efeito de sombra */
   }
   
   .avatar {
@@ -158,9 +196,9 @@ body {
     font-weight: bold;
   }
   
-  /* ------------------------ */
+  
   /* MODAL */
-  /* ------------------------ */
+  
   
   .modal {
     display: none;
@@ -251,11 +289,10 @@ body {
     display: none;
   }
   
-  /* FOOTER */
+  
   footer {
     border-top: 1px solid #2a2a2a;
     text-align: center;
     padding: 20px;
     color: #aaa;
   }
-  
