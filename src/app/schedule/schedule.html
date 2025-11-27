@@ -1,0 +1,84 @@
+<div class="min-h-screen">
+
+  <div id="app-container" class="max-w-4xl mx-auto p-4 md:p-8">
+
+    <!-- PÁGINA DE AGENDAMENTO -->
+    <div id="schedule-view" class="view-transition">
+
+      <h2 class="text-3xl font-bold text-center mb-8 text-yellow-500">Agende Seu Horário</h2>
+
+      <form (ngSubmit)="confirmarAgendamento()" #f="ngForm" class="bg-gray-800 p-8 rounded-xl shadow-2xl">
+
+        <div class="mb-5">
+          <label for="barber" class="block text-sm font-medium mb-2 text-white">Barbeiro *</label>
+          <select id="barber" name="barber" required [(ngModel)]="barbeiro" class="input-style w-full p-3 rounded-lg">
+            <option value="">Selecione o Barbeiro</option>
+            <option value="João">João (Cortes Clássicos)</option>
+            <option value="Marcos">Marcos (Barba e Navalha)</option>
+            <option value="Paulo">Paulo (Estilos Modernos)</option>
+          </select>
+        </div>
+
+        <div class="mb-5">
+          <label for="date" class="block text-sm font-medium mb-2 text-white">Data *</label>
+          <input type="date" id="date" name="date" required [(ngModel)]="data" class="input-style w-full p-3 rounded-lg">
+        </div>
+
+        <div class="mb-5">
+          <label for="time" class="block text-sm font-medium mb-2 text-white">Hora *</label>
+          <input type="time" id="time" name="time" required [(ngModel)]="hora" class="input-style w-full p-3 rounded-lg">
+        </div>
+
+        <div class="mb-5">
+          <label for="service" class="block text-sm font-medium mb-2 text-white">Serviço *</label>
+          <select id="service" name="service" required [(ngModel)]="servico" class="input-style w-full p-3 rounded-lg">
+            <option value="">Selecione o Serviço</option>
+            <option value="Corte de Cabelo">Corte de Cabelo (R$ 40)</option>
+            <option value="Barba Simples">Barba Simples (R$ 30)</option>
+            <option value="Corte + Barba">Corte + Barba (R$ 65)</option>
+            <option value="Hidratação">Hidratação (R$ 25)</option>
+          </select>
+        </div>
+
+        <div class="mb-5">
+          <label for="client-name" class="block text-sm font-medium mb-2 text-white">Seu Nome *</label>
+          <input type="text" id="client-name" name="clientName" required [(ngModel)]="nome"
+                 class="input-style w-full p-3 rounded-lg">
+        </div>
+
+        <div class="mb-6">
+          <label for="client-phone" class="block text-sm font-medium mb-2 text-white">Seu Telefone *</label>
+          <input type="tel" id="client-phone" name="clientPhone" required [(ngModel)]="telefone"
+                 class="input-style w-full p-3 rounded-lg">
+        </div>
+
+        <button type="submit" [disabled]="!f.form.valid"
+            class="btn-primary w-full p-3 rounded-lg text-white font-bold text-xl">
+            CONFIRMAR AGENDAMENTO
+        </button>
+      </form>
+
+      <button (click)="backHome()" class="text-yellow-500 mt-4 w-full hover:text-white">← Voltar para a Home</button>
+
+    </div>
+
+    <!-- MODAL -->
+    <div *ngIf="modalOpen" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 view-transition">
+
+      <div class="bg-gray-900 p-8 rounded-xl max-w-sm w-full text-center border border-yellow-500 shadow-2xl">
+        <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9"></path>
+        </svg>
+
+        <h3 class="text-2xl font-bold mb-3 text-white">Agendamento Confirmado!</h3>
+
+        <p class="text-gray-300 text-left mb-6 text-sm" style="white-space: pre-wrap">{{ modalDetails }}</p>
+
+        <button (click)="fecharModal()" class="btn-primary w-full p-3 rounded-lg text-white font-bold">FECHAR</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

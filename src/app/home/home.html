@@ -1,134 +1,53 @@
-<header class="main-header">
-        <div class="header-content">
-            
-            <button class="logo-button">
-                <div class="logo-icon-container">
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-scissors">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.848 8.25l1.555 1.555m-1.555-1.555l1.555-1.555M7.848 8.25L5.25 10.8m2.598-2.55l1.555 1.555m0 0l2.598 2.55m-2.598-2.55l2.598-2.55m0 0l2.805-2.805a1.125 1.125 0 0 1 1.591 0l2.805 2.805a1.125 1.125 0 0 1 0 1.591l-2.805 2.805m-2.805-2.805l-2.805 2.805m2.805-2.805l2.805 2.805m-2.805-2.805L12 5.25m-4.702 5.55l-1.555-1.555M12 5.25L9.195 8.055m2.805-2.805l1.555 1.555M12 5.25l2.805 2.805m0 0l1.555 1.555m-1.555-1.555l-1.555 1.555m0 0l-2.598 2.55m2.598-2.55l-2.598-2.55m2.598 2.55l2.805 2.805a1.125 1.125 0 0 1 0 1.591l-2.805 2.805a1.125 1.125 0 0 1-1.591 0l-2.805-2.805m2.805 2.805l-2.805-2.805m0 0L9.195 15.945m2.805-2.805l1.555 1.555"/>
-                    </svg>
-                </div>
-                <span class="logo-text">ELITE BARBER</span>
-            </button>
+<div class="min-h-screen">
 
-            
-            <div class="auth-section">
-                
-                <div class="user-info">
-                   
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon-user">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-5.5-2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 12a5.99 5.99 0 0 0-4.793 2.39A6.483 6.483 0 0 0 10 16.5a6.483 6.483 0 0 0 4.793-2.11A5.99 5.99 0 0 0 10 12Z" clip-rule="evenodd" />
-                    </svg>
-                    <span class="user-name">Usuário Teste</span>
-                </div>
+  <div id="app-container" class="max-w-4xl mx-auto p-4 md:p-8">
 
-                
-                <button class="btn-dashboard">
-                    Painel Admin
-                </button>
-
-              
-                <button class="btn-logout">
-                    Sair
-                </button>
-            </div>
-        </div>
-    </header>
-
-
-  <div class="banner">
-    <div class="banner-image" style="background-image: url('https://i.pinimg.com/originals/3e/ae/24/3eae24855b03862435f9430cd3f2e815.jpg');"></div>
-    <div class="banner-overlay"></div>
-
-    <div class="banner-content">
-      <div>
-        <h1 class="banner-title">Estilo & Tradição</h1>
-        <p class="banner-subtitle">
-          Experimente o melhor da barbearia moderna com profissionais de elite
-        </p>
-
-        <button class="login-btn" onclick="openModal()">Entrar / Criar Conta</button>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="section-header">
-      <h2>Nossos Barbeiros</h2>
-      <p>Escolha o profissional ideal para o seu estilo</p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="avatar">
-          <img src="barbeiro1.jpg" alt="Barbeiro 1">
-        </div>
-
-        <h3 class="barber-name">Barbeiro Exemplo</h3>
-        <p class="barber-specialty">Especialista em Corte Fade</p>
-
-        <div class="stars">★★★★★</div>
-
-        <button class="button">Agendar</button>
-      </div>
-
-    </div>
-  </div>
-
-  <div id="modal" class="modal">
-    <div class="modal-content">
-
-      <span class="close" onclick="closeModal()">&times;</span>
-
-      <h2 id="modal-title">Acesse sua conta</h2>
-      <p id="modal-desc" class="modal-desc">Entre com suas credenciais</p>
-
-      <div class="modal-form">
-
-        <div id="register-name" class="field hidden">
-          <label>Nome Completo</label>
-          <input type="text" id="name" placeholder="Seu nome">
-        </div>
-
-        <div class="field">
-          <label>Email</label>
-          <input type="email" id="email" placeholder="seu@email.com">
-        </div>
-
-        <div class="field">
-          <label>Senha</label>
-          <input type="password" id="password" placeholder="••••••••">
-        </div>
-
-        <div id="register-confirm" class="field hidden">
-          <label>Confirmar Senha</label>
-          <input type="password" id="confirm-password" placeholder="••••••••">
-        </div>
-
-        <button class="button" onclick="submitForm()" id="submit-btn">
-          Entrar
+    <!-- HOME -->
+    <div id="home-view" class="view-transition">
+      <header class="header-bg rounded-xl shadow-2xl p-8 text-center mb-10">
+        <h1 class="text-5xl font-extrabold text-white uppercase tracking-wider">Barbearia Alpha</h1>
+        <p class="text-xl text-yellow-500 mt-2">Seu estilo, nossa arte.</p>
+        <button (click)="selectBarbeiro('João')"
+                class="btn-primary mt-6 px-8 py-3 rounded-full text-white font-bold text-lg shadow-lg hover:shadow-xl transition duration-300">
+          AGENDAR HORÁRIO
         </button>
+      </header>
 
-        <div class="switch-mode">
-          <button onclick="toggleMode()" id="toggle-btn">
-            Não tem uma conta? Cadastre-se
-          </button>
+      <section class="mb-10">
+        <h2 class="text-3xl font-bold text-center mb-6 text-yellow-500">Nossos Barbeiros</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <div class="barber-card p-6 rounded-lg text-center">
+              <img src="https://placehold.co/100x100/6B46C1/FFFFFF?text=J"
+                alt="João"
+                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold text-white">João</h3>
+            <p class="text-gray-400">Especialista em cortes clássicos.</p>
+            <button class="btn-primary mt-4 px-4 py-2 rounded-lg text-white" (click)="selectBarbeiro('João')">Agendar com João</button>
+          </div>
+
+          <div class="barber-card p-6 rounded-lg text-center">
+              <img src="https://placehold.co/100x100/38B2AC/FFFFFF?text=M"
+                alt="Marcos"
+                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold text-white">Marcos</h3>
+            <p class="text-gray-400">Mestre em barba e navalha.</p>
+            <button class="btn-primary mt-4 px-4 py-2 rounded-lg text-white" (click)="selectBarbeiro('Marcos')">Agendar com Marcos</button>
+          </div>
+
+          <div class="barber-card p-6 rounded-lg text-center">
+              <img src="https://placehold.co/100x100/F6AD55/FFFFFF?text=P"
+                alt="Paulo"
+                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+            <h3 class="text-xl font-semibold text-white">Paulo</h3>
+            <p class="text-gray-400">Estilos modernos e fades.</p>
+            <button class="btn-primary mt-4 px-4 py-2 rounded-lg text-white" (click)="selectBarbeiro('Paulo')">Agendar com Paulo</button>
+          </div>
+
         </div>
-
-      </div>
-
-      <div class="modal-footer">
-        <p class="test-info">Credenciais de teste:</p>
-        <p>Admin: admin@barbearia.com / admin123</p>
-        <p>Barbeiro: barbeiro@barber.com / qualquer senha</p>
-      </div>
-
+      </section>
     </div>
+
   </div>
 
-  <footer>
-    © 2025 Elite Barber. Todos os direitos reservados.
-  </footer>
-
+</div>
