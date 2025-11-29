@@ -20,7 +20,7 @@ export class ScheduleComponent {
   modalOpen = false;
   modalDetails = '';
 
-  // Array para armazenar os horários disponíveis (8:00 a 18:00)
+  // lista de horario
   horariosDisponiveis: string[] = []; 
 
   constructor(private router: Router) {
@@ -30,13 +30,13 @@ export class ScheduleComponent {
         this.barbeiro = chosen;
       }
     }
-    this.gerarHorarios(); // Popula o array de horários ao iniciar
+    this.gerarHorarios(); // Popula a lista de horarios
   }
 
-  // Função para gerar horários de 30 em 30 minutos
+  // gerador de horario de 30 em 30 min 
   gerarHorarios() {
     this.horariosDisponiveis = [];
-    // Loop de 8h às 17h
+    // loop até 17:30
     for (let h = 8; h <= 17; h++) {
       for (let m = 0; m < 60; m += 30) {
         const horaStr = h.toString().padStart(2, '0');
@@ -44,22 +44,22 @@ export class ScheduleComponent {
         this.horariosDisponiveis.push(`${horaStr}:${minStr}`);
       }
     }
-    // Adiciona o último horário, 18:00
+    // add o ultimo horário, 18:00
     this.horariosDisponiveis.push('18:00');
   }
 
-  // Função para selecionar o horário ao clicar no botão
+  // func para selecionar o horario
   selecionarHora(h: string) {
     this.hora = h;
   }
 
   confirmarAgendamento() {
-    // Monta os detalhes do agendamento para o modal
+    // detalhes do agendamento
     this.modalDetails = `Barbeiro: ${this.barbeiro || '—'}\nServiço: ${this.servico || '—'}\nData: ${this.data || '—'}\nHora: ${this.hora || '—'}\nNome: ${this.nome || '—'}\nTelefone: ${this.telefone || '—'}`;
     this.modalOpen = true;
   }
 
-  // Modificado: Fecha o modal e navega para a Home
+  // fecha o modal e volta pro Home
   fecharModal() {
     this.modalOpen = false;
     this.backHome(); 

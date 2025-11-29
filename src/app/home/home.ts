@@ -13,7 +13,7 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   selectBarbeiro(name: string) {
-    // keep behavior similar to original code: store selected barber then navigate
+    
     localStorage.setItem('barbeiro', name);
     this.router.navigate(['/agendamento']);
   }

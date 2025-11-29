@@ -5,6 +5,5 @@ import { ScheduleComponent } from './schedule/schedule';
 export const routes: Routes = [
 	{ path: '', component: HomeComponent },
 	{ path: 'agendamento', component: ScheduleComponent },
-	// fallback - redirect to home
 	{ path: '**', redirectTo: '', pathMatch: 'full' }
 ];

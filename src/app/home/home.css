@@ -6,7 +6,6 @@
 }
 
 .titulo{
-  text-align: center;
   font-size: 3rem;
   font-weight: 800;
   color: #f0f0f0;
@@ -40,7 +39,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* Estilo para as descrições nas tags <p> */
+
 .barber-card p {
   font-size: 12px; 
   font-family: 'Inter', sans-serif;
